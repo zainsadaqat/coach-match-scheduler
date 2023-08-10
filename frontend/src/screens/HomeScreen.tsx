@@ -1,9 +1,20 @@
-import React from 'react'
+import React from 'react';
+import './HomeScreen.css';
+import Sidebar from '../components/Sidebar';
 
 const HomeScreen = () => {
   return (
-    <div>HomeScreen</div>
-  )
-}
+    <section className="">
+      <div className="layout-wrapper">
+        <div className="layout-container">
+          <aside className="sidebar">
+            <Sidebar />
+          </aside>
+          <main className="main">main body</main>
+        </div>
+      </div>
+    </section>
+  );
+};
 
-export default HomeScreen
+export default HomeScreen;
