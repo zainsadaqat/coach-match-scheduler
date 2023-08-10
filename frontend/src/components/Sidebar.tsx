@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
   return (
-    <nav>
+    <nav className="p-2 bg-slate-400">
       {/* Logo */}
       <Link to="/">
         <Logo logoImage={AppLogo} appName="Coach Match Scheduler" />
@@ -24,15 +24,17 @@ const Sidebar = () => {
             <Link to="/">
               <MenuItem iconImage={HomeIcon} menuItem="Home" />
             </Link>
-            <Link to="/my-team">
+            <Link to="my-team">
               <MenuItem iconImage={MyTeamIcon} menuItem="My Team" />
             </Link>
-            <Link to="/events">
+            <Link to="events">
               <MenuItem iconImage={EventsIcon} menuItem="Events" />
             </Link>
           </div>
           <div>
-            <MenuItem iconImage={HelpIcon} menuItem="Help" />
+            <Link to="help">
+              <MenuItem iconImage={HelpIcon} menuItem="Help" />
+            </Link>
           </div>
         </SidebarMenu>
       </div>

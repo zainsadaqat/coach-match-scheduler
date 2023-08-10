@@ -1,0 +1,16 @@
+.menu-item-large-screen {
+  display: block;
+}
+
+.menu-item-medium-screen {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .menu-item-large-screen {
+    display: none;
+  }
+  .menu-item-medium-screen {
+    display: block;
+  }
+}

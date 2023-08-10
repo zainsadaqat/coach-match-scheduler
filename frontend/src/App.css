@@ -1,0 +1,39 @@
+.layout-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.layout-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  min-height: 100vh;
+  grid-column-gap: 1em;
+  /* grid-row-gap: 0px; */
+}
+
+.sidebar {
+  /* initial-row/initial-col /final-row/final-col */
+  grid-area: 1 / 1 / 6 / 2;
+}
+.main {
+  /* initial-row/initial-col /final-row/final-col */
+  grid-area: 1 / 2 / 6 / 6;
+}
+
+/* If the browser window is 900 or smaller then it'll show the following layout */
+@media screen and (max-width: 768px) {
+  /* Just show the icons and hide the menu item text */
+  .layout-container {
+    background-color: rgb(243, 144, 144);
+    grid-template-columns: 60px auto auto auto;
+  }
+}
+
+/* If the browser window is 370 or smaller then it'll show the following layout */
+@media screen and (max-width: 375px) {
+  /* Hamburger icon to be added */
+  .layout-container {
+    background-color: antiquewhite;
+  }
+}

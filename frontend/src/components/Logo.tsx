@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './Logo.css';
 interface LogoProps {
   logoImage: string;
   appName: string;
@@ -7,10 +7,19 @@ interface LogoProps {
 
 const Logo: React.FC<LogoProps> = ({ logoImage, appName }) => {
   return (
-    <div className="flex items-center justify-around font-semibold my-4">
-      <img src={logoImage} alt={appName} width={28} height={28} />
-      <span>{appName}</span>
-    </div>
+    <React.Fragment>
+      <div className="logo-large-screen">
+        <div className="flex items-center justify-around font-semibold my-4">
+          <img src={logoImage} alt={appName} width={28} height={28} />
+          <span className="ml-2 text-[0.85rem]">{appName}</span>
+        </div>
+      </div>
+      <div className="logo-medium-screen">
+        <div className="flex items-center justify-center my-4">
+          <img src={logoImage} alt={appName} width={28} height={28} />
+        </div>
+      </div>
+    </React.Fragment>
   );
 };
 

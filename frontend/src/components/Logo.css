@@ -1,0 +1,17 @@
+.logo-large-screen {
+  display: block;
+}
+
+.logo-medium-screen {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .logo-large-screen {
+    display: none;
+  }
+  
+  .logo-medium-screen {
+    display: block;
+  }
+}
