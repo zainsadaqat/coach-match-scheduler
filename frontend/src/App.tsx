@@ -5,6 +5,7 @@ import LoginScreen from './screens/LoginScreen';
 import RegisterScreen from './screens/RegisterScreen';
 import EventsScreen from './screens/EventsScreen';
 import PageNotFound from './screens/PageNotFoundScreen';
+import MyTeamScreen from './screens/MyTeamScreen';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" element={<HomeScreen />} />
           <Route path="login" element={<LoginScreen />} />
           <Route path="register" element={<RegisterScreen />} />
+          <Route path="my-team" element={<MyTeamScreen />} />
           <Route path="events" element={<EventsScreen />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
