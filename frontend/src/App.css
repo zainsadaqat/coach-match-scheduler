@@ -1,42 +1,39 @@
-#root {
-  max-width: 1280px;
+.layout-wrapper {
+  max-width: 1500px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.layout-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  min-height: 100vh;
+  /* grid-column-gap: 1em; */
+  /* grid-row-gap: 0px; */
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sidebar {
+  /* initial-row/initial-col /final-row/final-col */
+  grid-area: 1 / 1 / 6 / 2;
+}
+.main {
+  /* initial-row/initial-col /final-row/final-col */
+  grid-area: 1 / 2 / 6 / 6;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+/* If the browser window is 900 or smaller then it'll show the following layout */
+@media screen and (max-width: 768px) {
+  /* Just show the icons and hide the menu item text */
+  .layout-container {
+    background-color: rgb(243, 144, 144);
+    grid-template-columns: 60px auto auto auto;
   }
 }
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+/* If the browser window is 370 or smaller then it'll show the following layout */
+@media screen and (max-width: 375px) {
+  /* Hamburger icon to be added */
+  .layout-container {
+    background-color: antiquewhite;
+  }
 }
