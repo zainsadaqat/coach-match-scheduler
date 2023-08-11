@@ -8,6 +8,8 @@ import PageNotFound from './screens/PageNotFoundScreen';
 import MyTeamScreen from './screens/MyTeamScreen';
 import Sidebar from './components/Sidebar';
 import HelpScreen from './screens/HelpScreen';
+import TopMenubar from './components/TopMenubar';
+import CreateEventScreen from './screens/CreateEventScreen';
 
 function App() {
   return (
@@ -19,12 +21,14 @@ function App() {
               <Sidebar />
             </aside>
             <main className="main">
+              <TopMenubar />
               <Routes>
                 <Route path="/" element={<HomeScreen />} />
                 <Route path="login" element={<LoginScreen />} />
                 <Route path="register" element={<RegisterScreen />} />
                 <Route path="my-team" element={<MyTeamScreen />} />
                 <Route path="events" element={<EventsScreen />} />
+                <Route path="create-event" element={<CreateEventScreen />} />
                 <Route path="help" element={<HelpScreen />} />
                 <Route path="*" element={<PageNotFound />} />
               </Routes>

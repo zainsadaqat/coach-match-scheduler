@@ -1,5 +1,5 @@
 .layout-wrapper {
-  max-width: 1200px;
+  max-width: 1500px;
   margin: 0 auto;
 }
 
@@ -8,7 +8,7 @@
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(5, 1fr);
   min-height: 100vh;
-  grid-column-gap: 1em;
+  /* grid-column-gap: 1em; */
   /* grid-row-gap: 0px; */
 }
 
