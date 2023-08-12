@@ -19,7 +19,7 @@ const Sidebar = () => {
       </Link>
 
       {/* Menu items */}
-      <div className="">
+      <div>
         <SidebarMenu>
           <div>
             <Link to="/">

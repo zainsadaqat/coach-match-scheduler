@@ -20,7 +20,7 @@ function App() {
             <aside className="sidebar">
               <Sidebar />
             </aside>
-            <main className="main">
+            <main className="main overflow-y-auto h-[100vh]">
               <TopMenubar />
               <Routes>
                 <Route path="/" element={<HomeScreen />} />
