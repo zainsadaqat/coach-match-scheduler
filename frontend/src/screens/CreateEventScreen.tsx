@@ -1,4 +1,5 @@
 import React from 'react';
+import MyCalendar from '../components/MyCalendar';
 
 const CreateEventScreen = () => {
   return (
@@ -25,7 +26,9 @@ const CreateEventScreen = () => {
             />
           </div>
           <h3 className="font-bold text-[1.25rem]">Date & Time</h3>
-          <div></div>
+          <div>
+            <MyCalendar />
+          </div>
           <h3 className="font-bold text-[1.25rem]">Location</h3>
           <div className="my-2">
             <label className="font-medium text-[14px]">Event will be in</label>
