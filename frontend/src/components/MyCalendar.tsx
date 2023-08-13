@@ -1,29 +1,21 @@
-import React from 'react';
-import { Calendar, momentLocalizer } from 'react-big-calendar';
-import 'react-big-calendar/lib/css/react-big-calendar.css';
-import moment from 'moment';
-import 'moment/locale/en-gb';
+import react, { useState } from 'react';
+import Calendar from 'react-calendar';
+import './MyCalendar.css';
 
 const MyCalendar = () => {
-  const localizer = momentLocalizer(moment);
-  const events = [
-    {
-      title: 'Meeting',
-      start: new Date(2023, 6, 20, 10, 0), // July 20, 2023, 10:00 AM
-      end: new Date(2023, 6, 20, 12, 0), // July 20, 2023, 12:00 PM
-    },
-    // Add more events as needed
-  ];
+  const [date, setDate] = useState<Date>(new Date());
+  const handleDateChange = (value: Date): void => {
+    setDate(value);
+  };
   return (
-    <div>
-      <h3>My Calendar</h3>
-      <Calendar
-        localizer={localizer}
-        events={events}
-        startAccessor="start"
-        endAccessor="end"
-        style={{ height: 500 }} // Set a height for the calendar
-      />
+    <div className="app">
+      <h1 className="text-center">React Calendar</h1>
+      <div className="calendar-container">
+        <Calendar onChange={handleDateChange as any} value={date} />
+      </div>
+      <p className="text-center">
+        <span className="bold">Selected Date:</span> {date.toDateString()}
+      </p>
     </div>
   );
 };
