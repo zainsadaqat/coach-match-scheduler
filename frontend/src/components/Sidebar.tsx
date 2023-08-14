@@ -1,4 +1,3 @@
-import React from 'react';
 import MenuItem from './MenuItem';
 import HomeIcon from '../assets/HomeIcon.png';
 import MyTeamIcon from '../assets/MyTeamIcon.png';
@@ -41,6 +40,13 @@ const Sidebar = () => {
                 <MenuItem iconImage={EventsIcon} menuItem="Events" active />
               ) : (
                 <MenuItem iconImage={EventsIcon} menuItem="Events" />
+              )}
+            </Link>
+            <Link to="register">
+              {currentPath === '/register' ? (
+                <MenuItem iconImage={EventsIcon} menuItem="Sign up" active />
+              ) : (
+                <MenuItem iconImage={EventsIcon} menuItem="Sign up" />
               )}
             </Link>
           </div>
