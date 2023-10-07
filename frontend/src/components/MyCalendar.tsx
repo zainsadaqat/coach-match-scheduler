@@ -9,13 +9,12 @@ const MyCalendar = () => {
   };
   return (
     <div className="app">
-      <h1 className="text-center">React Calendar</h1>
       <div className="calendar-container">
         <Calendar onChange={handleDateChange as any} value={date} />
       </div>
-      <p className="text-center">
+      {/* <p className="">
         <span className="bold">Selected Date:</span> {date.toDateString()}
-      </p>
+      </p> */}
     </div>
   );
 };

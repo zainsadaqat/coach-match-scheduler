@@ -12,30 +12,35 @@ import TopMenubar from './components/TopMenubar';
 import CreateEventScreen from './screens/CreateEventScreen';
 
 function App() {
+  const user = false;
   return (
     <>
-      <section className="">
-        <div className="layout-wrapper">
-          <div className="layout-container">
-            <aside className="sidebar">
-              <Sidebar />
-            </aside>
-            <main className="main overflow-y-auto h-[100vh]">
-              <TopMenubar />
-              <Routes>
-                <Route path="/" element={<HomeScreen />} />
-                <Route path="login" element={<LoginScreen />} />
-                <Route path="register" element={<RegisterScreen />} />
-                <Route path="my-team" element={<MyTeamScreen />} />
-                <Route path="events" element={<EventsScreen />} />
-                <Route path="create-event" element={<CreateEventScreen />} />
-                <Route path="help" element={<HelpScreen />} />
-                <Route path="*" element={<PageNotFound />} />
-              </Routes>
-            </main>
+      {user ? (
+        <section className="">
+          <div className="layout-wrapper">
+            <div className="layout-container">
+              <aside className="sidebar">
+                <Sidebar />
+              </aside>
+              <main className="main overflow-y-auto h-[100vh]">
+                <TopMenubar />
+                <Routes>
+                  <Route path="/" element={<HomeScreen />} />
+                  <Route path="login" element={<LoginScreen />} />
+                  <Route path="register" element={<RegisterScreen />} />
+                  <Route path="my-team" element={<MyTeamScreen />} />
+                  <Route path="events" element={<EventsScreen />} />
+                  <Route path="create-event" element={<CreateEventScreen />} />
+                  <Route path="help" element={<HelpScreen />} />
+                  <Route path="*" element={<PageNotFound />} />
+                </Routes>
+              </main>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      ) : (
+        <RegisterScreen />
+      )}
     </>
   );
 }
